@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSK.Security.Cryptography.Aes", "OSK.Security.Cryptography.Aes\OSK.Security.Cryptography.Aes.csproj", "{AEC5394B-25D0-4629-A7F5-DC426804B913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSK.Security.Cryptography.Aes.UnitTests", "OSK.Security.Cryptography.Aes.UnitTests\OSK.Security.Cryptography.Aes.UnitTests.csproj", "{1EA42492-1CE8-4100-92DD-82E92E38873B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEC5394B-25D0-4629-A7F5-DC426804B913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC5394B-25D0-4629-A7F5-DC426804B913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC5394B-25D0-4629-A7F5-DC426804B913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC5394B-25D0-4629-A7F5-DC426804B913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA42492-1CE8-4100-92DD-82E92E38873B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA42492-1CE8-4100-92DD-82E92E38873B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA42492-1CE8-4100-92DD-82E92E38873B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA42492-1CE8-4100-92DD-82E92E38873B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5152A7EC-FA88-48B1-8462-EA3A45249730}
+	EndGlobalSection
+EndGlobal
