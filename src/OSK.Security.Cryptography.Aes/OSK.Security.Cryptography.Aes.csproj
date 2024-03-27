@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+	  <TargetFramework>netstandard2.1</TargetFramework>
 	  <RepositoryUrl>https://github.com/OpenSourceKingdom/OSK.Security.Cryptography.Aes</RepositoryUrl>
 	  <RepositoryType>git</RepositoryType>
 	  <Description>Aes implementation for the OSK Cryptography library with DI support in .NET.</Description>
@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OSK.Security.Cryptography" Version="1.1.1" />
+    <PackageReference Include="OSK.Security.Cryptography" Version="1.1.2" />
   </ItemGroup>
 
 </Project>
