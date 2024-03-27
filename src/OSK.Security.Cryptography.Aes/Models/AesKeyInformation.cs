@@ -1,11 +1,10 @@
-﻿using OSK.Security.Cryptography;
-using OSK.Security.Cryptography.Abstractions;
+﻿using OSK.Security.Cryptography.Models;
 using System;
 using System.Security.Cryptography;
 
 namespace OSK.Security.Cryptography.Aes.Models
 {
-    public class AesKeyInformation : SymmetricKeyInformation
+    public class AesKeyInformation : SymmetricKeyInformation<AesPublicKeyInformation>
     {
         #region Static
 
@@ -58,7 +57,7 @@ namespace OSK.Security.Cryptography.Aes.Models
 
         #region CryptographicKey Overrides
 
-        public override PublicKeyInformation GetPublicKeyInformation()
+        public override AesPublicKeyInformation GetPublicKeyInformation()
         {
             return new AesPublicKeyInformation()
             {

@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace OSK.Security.Cryptography.Aes.Models
 {
-    public class AesPublicKeyInformation : PublicKeyInformation
+    public class AesPublicKeyInformation : IPublicKeyInformation
     {
         public byte[] IV { get; set; }
 
