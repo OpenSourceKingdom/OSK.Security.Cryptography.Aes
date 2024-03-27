@@ -5,7 +5,7 @@ using Xunit;
 namespace OSK.Security.Cryptography.Aes.UnitTests
 {
     public abstract class CryptographicKeyTests<T>
-        where T : SymmetricKeyInformation
+        where T : ISymmetricKeyInformation
     {
         #region Variables
 

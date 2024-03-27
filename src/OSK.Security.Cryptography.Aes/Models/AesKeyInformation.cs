@@ -1,11 +1,10 @@
-﻿using OSK.Security.Cryptography;
-using OSK.Security.Cryptography.Abstractions;
+﻿using OSK.Security.Cryptography.Models;
 using System;
 using System.Security.Cryptography;
 
 namespace OSK.Security.Cryptography.Aes.Models
 {
-    public class AesKeyInformation : SymmetricKeyInformation
+    public class AesKeyInformation : SymmetricKeyInformation<AesPublicKeyInformation>
     {
         #region Static
 
@@ -15,7 +14,18 @@ namespace OSK.Security.Cryptography.Aes.Models
             using var aes = System.Security.Cryptography.Aes.Create();
             CryptographicKeyHelpers.ValidateKeySize(keySize, aes.LegalKeySizes);
 
+            aes.KeySize = keySize;
             aes.GenerateKey();
+            aes.GenerateIV();
+            return new AesKeyInformation(aes.Key, aes.IV, blockSize, paddingMode, cipherMode);
+        }
+
+        public static AesKeyInformation New(byte[] key, int blockSize = 128,
+            PaddingMode paddingMode = PaddingMode.PKCS7, CipherMode cipherMode = CipherMode.CBC)
+        {
+            using var aes = System.Security.Cryptography.Aes.Create();
+
+            aes.Key = key;
             aes.GenerateIV();
             return new AesKeyInformation(aes.Key, aes.IV, blockSize, paddingMode, cipherMode);
         }
@@ -58,7 +68,7 @@ namespace OSK.Security.Cryptography.Aes.Models
 
         #region CryptographicKey Overrides
 
-        public override PublicKeyInformation GetPublicKeyInformation()
+        public override AesPublicKeyInformation GetPublicKeyInformation()
         {
             return new AesPublicKeyInformation()
             {

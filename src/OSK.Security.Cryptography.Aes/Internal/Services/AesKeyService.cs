@@ -3,7 +3,6 @@ using System.Security.Cryptography;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using OSK.Security.Cryptography;
 using OSK.Security.Cryptography.Aes.Models;
 
 namespace OSK.Security.Cryptography.Aes.Internal.Services
@@ -12,9 +11,13 @@ namespace OSK.Security.Cryptography.Aes.Internal.Services
     {
         #region Constructors
 
-        public AesKeyService(AesKeyInformation keyInformation)
-            : base(keyInformation)
+        public AesKeyService()
         {
+        }
+
+        internal AesKeyService(AesKeyInformation keyInformation)
+        {
+            KeyInformation = keyInformation;
         }
 
         #endregion

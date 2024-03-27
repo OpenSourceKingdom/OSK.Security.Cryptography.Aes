@@ -3,9 +3,9 @@ using OSK.Security.Cryptography.Aes.Models;
 
 namespace OSK.Security.Cryptography.Aes.UnitTests
 {
-    public class AesKeyTests : CryptographicKeyTests<AesKeyInformation>
+    public class AesKeyKeySizeTests : CryptographicKeyTests<AesKeyInformation>
     {
-        public AesKeyTests()
+        public AesKeyKeySizeTests()
             : base(new AesKeyService(AesKeyInformation.New(128)))
         {
 
