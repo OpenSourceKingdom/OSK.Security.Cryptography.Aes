@@ -8,6 +8,16 @@ namespace OSK.Security.Cryptography.Aes.Models
     {
         #region Static
 
+        /// <summary>
+        /// Returns an array of the valid key sizes for the Aes encryption implementation
+        /// </summary>
+        /// <returns>The array of <see cref="KeySizes"/> that are valid for use with this implementation</returns>
+        public static KeySizes[] GetValidKeySizes()
+        {
+            using var aes = System.Security.Cryptography.Aes.Create();
+            return aes.LegalKeySizes;
+        }
+
         public static AesKeyInformation New(int keySize, int blockSize = 128,
             PaddingMode paddingMode = PaddingMode.PKCS7, CipherMode cipherMode = CipherMode.CBC)
         {
