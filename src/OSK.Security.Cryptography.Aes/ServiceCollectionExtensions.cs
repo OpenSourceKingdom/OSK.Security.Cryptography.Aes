@@ -8,7 +8,7 @@ namespace OSK.Security.Cryptography.Aes
     {
         public static IServiceCollection AddAesKeyService(this IServiceCollection services)
         {
-            services.AddSymmetricKeyService<AesKeyService, AesKeyInformation>();
+            services.AddSymmetricKeyService<AesKeyService, AesKeyInformation>("Aes");
 
             return services;
         }
